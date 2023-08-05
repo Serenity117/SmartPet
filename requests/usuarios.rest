@@ -1,0 +1,23 @@
+GET http://localhost:3000/api/usuarios 
+
+###
+
+GET http://localhost:3000/api/usuarios/4 
+
+###
+
+POST  http://localhost:3000/api/usuarios 
+Content-Type: application/json
+
+{
+    "nombre": "nuevoUsuario",
+    "apellidos": "jijij",
+    "telefono": 2334525,
+    "correo": "cualquier@gmail.com",
+    "contrasena": "contra",
+    "domicilio": "jijue"
+}
+
+###
+
+DELETE http://localhost:3000/api/usuarios/5

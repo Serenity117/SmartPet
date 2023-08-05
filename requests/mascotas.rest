@@ -1,0 +1,22 @@
+GET http://localhost:3000/api/mascotas 
+
+###
+
+GET http://localhost:3000/api/mascotas/4
+
+###
+
+POST  http://localhost:3000/api/mascotas 
+Content-Type: application/json
+
+{
+
+"nombre": "El Canelitas",
+"raza": "Bulldog",
+"edad": 9
+
+}
+
+###
+
+DELETE http://localhost:3000/api/mascotas/5
