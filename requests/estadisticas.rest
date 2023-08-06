@@ -13,10 +13,11 @@ Content-Type: application/json
 
 "Lpm": 102,
 "temperatura": "38°C",
-"ubicacion": "40? 24' 59'' N; 03? 42' 09'' O"
+"ubicacion": "40? 24' 59'' N; 03? 42' 09'' O",
+"IdPet": 729
 
 }
 
 ###
 
-DELETE http://localhost:3000/api/estadisticas/5
+DELETE http://localhost:3000/api/estadisticas/7

@@ -27,11 +27,11 @@ router.post('/', async (request, response) => {
     try {
         const results = await stadisticService.postStadistic({ body: request.body });
         if(results>0){
-            console.log('Usuario creado correctamente');
-            response.send({ msg: 'Usuario creado correctamente'});
+            console.log('Estadistica creada correctamente');
+            response.send({ msg: 'Estadistica creada correctamente'});
         } else {
-            console.log({error: 'error al crear usuario'});
-            response.send({error: 'error al crear usuario'})
+            console.log({error: 'error al crear estadistica'});
+            response.send({error: 'error al crear estadistica'})
         }
     } catch (error) {
         console.log(error);
@@ -43,7 +43,7 @@ router.delete('/:id', async (request, response) => {
     try {
         const results = await stadisticService.deleteStadistics({id: request.params.id});
         if (results>0){
-            response.send({msg: 'Usuario eliminado correctamente'});
+            response.send({msg: 'Estadistica eliminada correctamente'});
         } else {
             response.status(404).send({msg: 'Error al eliminar'});
         }

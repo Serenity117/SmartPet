@@ -25,12 +25,12 @@ export const getOneStadistic = ({ id }) => {
 }
 
 export const postStadistic = ({ body }) => {
-    let { Lpm, temperatura, ubicacion } = body;
+    let { Lpm, temperatura, ubicacion, IdPet } = body;
     const fecha = new Date()
 
     return new Promise((resolve, reject) => {
-        conn.query(`insert into estadisticas values (null, ?, ?, ?, ?, null)`, 
-        [Lpm, temperatura, ubicacion, fecha.toISOString()], (error, results, field) => {
+        conn.query(`insert into estadisticas values (null, ?, ?, ?, ?, ?)`, 
+        [Lpm, temperatura, ubicacion, fecha.toISOString(), IdPet], (error, results, field) => {
             if(error){
                 reject(error)
             } else {

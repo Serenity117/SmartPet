@@ -25,11 +25,11 @@ export const getOnePet = ({ id }) => {
 }
 
 export const postPet = ({ body }) => {
-    let { nombre, raza, edad } = body;
+    let { IdUser, nombre, raza, edad } = body;
 
     return new Promise((resolve, reject) => {
-        conn.query(`insert into mascota values (null, null, ?, ?, ?)`,
-        [nombre, raza, edad], function (error, results, field) {
+        conn.query(`insert into mascota values (?, null, ?, ?, ?)`,
+        [IdUser, nombre, raza, edad], function (error, results, field) {
             if(error){
                 reject(error)
             } else {
