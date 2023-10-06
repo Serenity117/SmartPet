@@ -1,4 +1,4 @@
-GET http://localhost:3000/api/estadisticas
+GET http://192.168.196.200:3000/api/estadisticas
 
 ###
 
